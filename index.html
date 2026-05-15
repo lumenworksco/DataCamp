@@ -1,501 +1,404 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Florian Braun — DataCamp Credentials</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&display=swap"
-            rel="stylesheet"
-        />
-        <style>
-            :root {
-                --bg: #0d0d0d;
-                --surface: #141414;
-                --border: #222;
-                --accent: #37de8a;
-                --accent-dim: rgba(55, 222, 138, 0.12);
-                --text: #e8e8e8;
-                --muted: #555;
-                --card-bg: #111;
-            }
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florian Braun — DataCamp Credentials</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta property="og:title" content="Florian Braun — Deep Learning & LLM Engineering">
+<meta property="og:description" content="4 DataCamp credentials covering PyTorch, LangChain, RAG, and Multi-Modal models with Hugging Face.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Florian Braun — Deep Learning & LLM Engineering">
+<meta name="twitter:image" content="og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --surface: #141414;
+    --border: #222;
+    --accent: #37de8a;
+    --accent-dim: rgba(55,222,138,0.12);
+    --text: #e8e8e8;
+    --muted: #555;
+    --card-bg: #111;
+  }
 
-            *,
-            *::before,
-            *::after {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-            }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-            body {
-                background: var(--bg);
-                color: var(--text);
-                font-family: "DM Mono", monospace;
-                min-height: 100vh;
-                padding: 0 0 80px;
-                overflow-x: hidden;
-            }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    min-height: 100vh;
+    padding: 0 0 80px;
+    overflow-x: hidden;
+  }
 
-            /* ── Header ── */
-            header {
-                position: relative;
-                padding: 72px 48px 56px;
-                border-bottom: 1px solid var(--border);
-                overflow: hidden;
-            }
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 72px 48px 56px;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
 
-            header::before {
-                content: "";
-                position: absolute;
-                top: -120px;
-                left: -80px;
-                width: 500px;
-                height: 500px;
-                background: radial-gradient(
-                    circle,
-                    rgba(55, 222, 138, 0.08) 0%,
-                    transparent 70%
-                );
-                pointer-events: none;
-            }
+  header::before {
+    content: '';
+    position: absolute;
+    top: -120px; left: -80px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(55,222,138,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
 
-            .label {
-                font-size: 11px;
-                letter-spacing: 0.18em;
-                text-transform: uppercase;
-                color: var(--accent);
-                margin-bottom: 16px;
-            }
+  .label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
 
-            h1 {
-                font-family: "Fraunces", serif;
-                font-size: clamp(2rem, 5vw, 3.6rem);
-                font-weight: 300;
-                line-height: 1.1;
-                color: #fff;
-                max-width: 640px;
-            }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: #fff;
+    max-width: 640px;
+  }
 
-            h1 em {
-                font-style: italic;
-                color: var(--accent);
-            }
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
 
-            .meta {
-                margin-top: 20px;
-                font-size: 12px;
-                color: var(--muted);
-                display: flex;
-                gap: 32px;
-                flex-wrap: wrap;
-            }
+  .meta {
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
 
-            .meta span::before {
-                content: "// ";
-                color: var(--border);
-            }
+  .meta span::before {
+    content: '// ';
+    color: var(--border);
+  }
 
-            /* ── Grid ── */
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(
-                    auto-fill,
-                    minmax(min(100%, 480px), 1fr)
-                );
-                gap: 1px;
-                background: var(--border);
-                margin: 0;
-            }
+  /* ── Grid ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr));
+    gap: 1px;
+    background: var(--border);
+    margin: 0;
+  }
 
-            /* ── Card ── */
-            .card {
-                background: var(--card-bg);
-                padding: 40px;
-                position: relative;
-                transition: background 0.2s;
-            }
+  /* ── Card ── */
+  .card {
+    background: var(--card-bg);
+    padding: 40px;
+    position: relative;
+    transition: background 0.2s;
+  }
 
-            .card:hover {
-                background: #161616;
-            }
+  .card:hover { background: #161616; }
 
-            .card-number {
-                font-size: 11px;
-                letter-spacing: 0.12em;
-                color: var(--muted);
-                margin-bottom: 28px;
-            }
+  .card-number {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
 
-            .card-title {
-                font-family: "Fraunces", serif;
-                font-size: 1.35rem;
-                font-weight: 300;
-                color: #fff;
-                line-height: 1.3;
-                margin-bottom: 8px;
-            }
+  .card-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.35rem;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
 
-            .card-issuer {
-                font-size: 11px;
-                color: var(--muted);
-                letter-spacing: 0.1em;
-                margin-bottom: 28px;
-            }
+  .card-issuer {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 28px;
+  }
 
-            /* Skills */
-            .skills {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 6px;
-                margin-bottom: 32px;
-            }
+  /* Skills */
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 32px;
+  }
 
-            .skill-tag {
-                font-size: 10px;
-                letter-spacing: 0.08em;
-                padding: 4px 10px;
-                border: 1px solid var(--border);
-                color: var(--muted);
-                border-radius: 2px;
-            }
+  .skill-tag {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 2px;
+  }
 
-            /* Credential ID block */
-            .credential-block {
-                background: #0a0a0a;
-                border: 1px solid var(--border);
-                padding: 16px 18px;
-                margin-bottom: 20px;
-                border-radius: 4px;
-            }
+  /* Credential ID block */
+  .credential-block {
+    background: #0a0a0a;
+    border: 1px solid var(--border);
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
 
-            .credential-label {
-                font-size: 10px;
-                letter-spacing: 0.14em;
-                color: var(--muted);
-                text-transform: uppercase;
-                margin-bottom: 6px;
-            }
+  .credential-label {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
 
-            .credential-id {
-                font-size: 13px;
-                color: var(--accent);
-                word-break: break-all;
-                line-height: 1.5;
-            }
+  .credential-id {
+    font-size: 13px;
+    color: var(--accent);
+    word-break: break-all;
+    line-height: 1.5;
+  }
 
-            /* CTA */
-            .cta {
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                font-size: 11px;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-                color: var(--accent);
-                text-decoration: none;
-                border: 1px solid rgba(55, 222, 138, 0.3);
-                padding: 10px 20px;
-                border-radius: 2px;
-                transition:
-                    background 0.15s,
-                    border-color 0.15s;
-            }
+  /* CTA */
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid rgba(55,222,138,0.3);
+    padding: 10px 20px;
+    border-radius: 2px;
+    transition: background 0.15s, border-color 0.15s;
+  }
 
-            .cta:hover {
-                background: var(--accent-dim);
-                border-color: var(--accent);
-            }
+  .cta:hover {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+  }
 
-            .cta svg {
-                flex-shrink: 0;
-            }
+  .cta svg { flex-shrink: 0; }
 
-            /* Under construction card */
-            .card.wip {
-                opacity: 0.6;
-            }
+  /* Under construction card */
+  .card.wip { opacity: 0.6; }
 
-            .wip-badge {
-                display: inline-flex;
-                align-items: center;
-                gap: 6px;
-                font-size: 11px;
-                letter-spacing: 0.12em;
-                color: #f5a623;
-                border: 1px solid rgba(245, 166, 35, 0.3);
-                padding: 6px 14px;
-                border-radius: 2px;
-                margin-bottom: 20px;
-            }
+  .wip-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: #f5a623;
+    border: 1px solid rgba(245,166,35,0.3);
+    padding: 6px 14px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
 
-            .wip-pulse {
-                width: 6px;
-                height: 6px;
-                background: #f5a623;
-                border-radius: 50%;
-                animation: pulse 1.4s ease-in-out infinite;
-            }
+  .wip-pulse {
+    width: 6px; height: 6px;
+    background: #f5a623;
+    border-radius: 50%;
+    animation: pulse 1.4s ease-in-out infinite;
+  }
 
-            @keyframes pulse {
-                0%,
-                100% {
-                    opacity: 1;
-                    transform: scale(1);
-                }
-                50% {
-                    opacity: 0.4;
-                    transform: scale(0.7);
-                }
-            }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
 
-            .wip-note {
-                font-size: 12px;
-                color: var(--muted);
-                line-height: 1.7;
-            }
+  .wip-note {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
 
-            /* Divider line between header and grid */
-            .section-header {
-                padding: 24px 48px 20px;
-                border-bottom: 1px solid var(--border);
-                font-size: 11px;
-                letter-spacing: 0.14em;
-                color: var(--muted);
-                text-transform: uppercase;
-                display: flex;
-                justify-content: space-between;
-            }
+  /* Divider line between header and grid */
+  .section-header {
+    padding: 24px 48px 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
 
-            /* Footer */
-            footer {
-                margin-top: 40px;
-                padding: 0 48px;
-                font-size: 11px;
-                color: var(--muted);
-                display: flex;
-                gap: 24px;
-                flex-wrap: wrap;
-            }
+  /* Footer */
+  footer {
+    margin-top: 40px;
+    padding: 0 48px;
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
 
-            footer a {
-                color: var(--muted);
-                text-decoration: none;
-                transition: color 0.15s;
-            }
+  footer a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
 
-            footer a:hover {
-                color: var(--accent);
-            }
+  footer a:hover { color: var(--accent); }
 
-            /* Stagger reveal */
-            .card {
-                opacity: 0;
-                transform: translateY(16px);
-                animation: reveal 0.5s ease forwards;
-            }
-            .card:nth-child(1) {
-                animation-delay: 0.05s;
-            }
-            .card:nth-child(2) {
-                animation-delay: 0.12s;
-            }
-            .card:nth-child(3) {
-                animation-delay: 0.19s;
-            }
-            .card:nth-child(4) {
-                animation-delay: 0.26s;
-            }
+  /* Stagger reveal */
+  .card {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: reveal 0.5s ease forwards;
+  }
+  .card:nth-child(1) { animation-delay: 0.05s; }
+  .card:nth-child(2) { animation-delay: 0.12s; }
+  .card:nth-child(3) { animation-delay: 0.19s; }
+  .card:nth-child(4) { animation-delay: 0.26s; }
 
-            @keyframes reveal {
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
+  @keyframes reveal {
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-            .card.wip {
-                animation-delay: 0.26s;
-            }
+  .card.wip { animation-delay: 0.26s; }
 
-            @media (max-width: 600px) {
-                header {
-                    padding: 48px 24px 36px;
-                }
-                .section-header {
-                    padding: 20px 24px 16px;
-                }
-                .card {
-                    padding: 28px 24px;
-                }
-                footer {
-                    padding: 0 24px;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <p class="label">Florian Braun · Certifications</p>
-            <h1>Deep Learning<br />&amp; <em>LLM Engineering</em></h1>
-            <div class="meta">
-                <span>DataCamp · 2026</span>
-                <span>AI &amp; Data Engineering</span>
-            </div>
-        </header>
+  @media (max-width: 600px) {
+    header { padding: 48px 24px 36px; }
+    .section-header { padding: 20px 24px 16px; }
+    .card { padding: 28px 24px; }
+    footer { padding: 0 24px; }
+  }
+</style>
+</head>
+<body>
 
-        <div class="section-header">
-            <span>4 credentials</span>
-            <span>Issued Mar 2026</span>
-        </div>
+<header>
+  <p class="label">Florian Braun · Certifications</p>
+  <h1>Deep Learning<br>&amp; <em>LLM Engineering</em></h1>
+  <div class="meta">
+    <span>DataCamp · 2026</span>
+    <span>AI &amp; Data Engineering</span>
+  </div>
+</header>
 
-        <div class="grid">
-            <!-- 1 -->
-            <div class="card">
-                <p class="card-number">01 / 04</p>
-                <h2 class="card-title">Transformer Models with PyTorch</h2>
-                <p class="card-issuer">DATACAMP · ISSUED MARCH 2026</p>
-                <div class="skills">
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">Deep Learning</span>
-                    <span class="skill-tag">Transformers</span>
-                    <span class="skill-tag">NLP</span>
-                </div>
-                <div class="credential-block">
-                    <p class="credential-label">Credential ID</p>
-                    <p class="credential-id">
-                        d78aef5cd39de2975b3c8ae4f00e9b275a53b147
-                    </p>
-                </div>
-                <a
-                    class="cta"
-                    href="https://www.datacamp.com/completed/statement-of-accomplishment/course/d78aef5cd39de2975b3c8ae4f00e9b275a53b147"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                        <path
-                            d="M2 10L10 2M10 2H4M10 2V8"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                        />
-                    </svg>
-                    View on DataCamp
-                </a>
-            </div>
+<div class="section-header">
+  <span>4 credentials</span>
+  <span>Issued Mar 2026</span>
+</div>
 
-            <!-- 2 -->
-            <div class="card">
-                <p class="card-number">02 / 04</p>
-                <h2 class="card-title">
-                    Developing LLM Applications with LangChain
-                </h2>
-                <p class="card-issuer">DATACAMP · ISSUED MARCH 2026</p>
-                <div class="skills">
-                    <span class="skill-tag">LangChain</span>
-                    <span class="skill-tag">RAG</span>
-                    <span class="skill-tag">LLM</span>
-                    <span class="skill-tag">Prompt Engineering</span>
-                </div>
-                <div class="credential-block">
-                    <p class="credential-label">Credential ID</p>
-                    <p class="credential-id">
-                        be5e7b847f1ecfe0040912492161c968b3c9c416
-                    </p>
-                </div>
-                <a
-                    class="cta"
-                    href="https://www.datacamp.com/completed/statement-of-accomplishment/course/be5e7b847f1ecfe0040912492161c968b3c9c416"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                        <path
-                            d="M2 10L10 2M10 2H4M10 2V8"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                        />
-                    </svg>
-                    View on DataCamp
-                </a>
-            </div>
+<div class="grid">
 
-            <!-- 3 -->
-            <div class="card">
-                <p class="card-number">03 / 04</p>
-                <h2 class="card-title">
-                    Intermediate Deep Learning with PyTorch
-                </h2>
-                <p class="card-issuer">DATACAMP · ISSUED MARCH 2026</p>
-                <div class="skills">
-                    <span class="skill-tag">Deep Learning</span>
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">Neural Networks</span>
-                    <span class="skill-tag">CNNs</span>
-                </div>
-                <div class="credential-block">
-                    <p class="credential-label">Credential ID</p>
-                    <p class="credential-id">
-                        1afc7147bdb538e2e138fff4587d37b1a72f3955
-                    </p>
-                </div>
-                <a
-                    class="cta"
-                    href="https://www.datacamp.com/completed/statement-of-accomplishment/course/1afc7147bdb538e2e138fff4587d37b1a72f3955"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                        <path
-                            d="M2 10L10 2M10 2H4M10 2V8"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                        />
-                    </svg>
-                    View on DataCamp
-                </a>
-            </div>
+  <!-- 1 – WIP -->
+  <div class="card wip">
+    <p class="card-number">01 / 04</p>
+    <h2 class="card-title">Multi-Modal Models with Hugging Face</h2>
+    <p class="card-issuer">DATACAMP · COMING SOON</p>
+    <div class="skills">
+      <span class="skill-tag">Hugging Face</span>
+      <span class="skill-tag">Multi-Modal AI</span>
+      <span class="skill-tag">Vision-Language</span>
+      <span class="skill-tag">Transformers</span>
+    </div>
+    <div class="wip-badge">
+      <span class="wip-pulse"></span>
+      Under Construction
+    </div>
+    <p class="wip-note">Credential will appear here once issued.<br>Check back shortly.</p>
+  </div>
 
-            <!-- 4 – WIP -->
-            <div class="card wip">
-                <p class="card-number">04 / 04</p>
-                <h2 class="card-title">Multi-Modal Models with Hugging Face</h2>
-                <p class="card-issuer">DATACAMP · COMING SOON</p>
-                <div class="skills">
-                    <span class="skill-tag">Hugging Face</span>
-                    <span class="skill-tag">Multi-Modal AI</span>
-                    <span class="skill-tag">Vision-Language</span>
-                    <span class="skill-tag">Transformers</span>
-                </div>
-                <div class="wip-badge">
-                    <span class="wip-pulse"></span>
-                    Under Construction
-                </div>
-                <p class="wip-note">
-                    Credential will appear here once issued.<br />Check back
-                    shortly.
-                </p>
-            </div>
-        </div>
+  <!-- 2 -->
+  <div class="card">
+    <p class="card-number">02 / 04</p>
+    <h2 class="card-title">Transformer Models with PyTorch</h2>
+    <p class="card-issuer">DATACAMP · ISSUED MARCH 2026</p>
+    <div class="skills">
+      <span class="skill-tag">PyTorch</span>
+      <span class="skill-tag">Deep Learning</span>
+      <span class="skill-tag">Transformers</span>
+      <span class="skill-tag">NLP</span>
+    </div>
+    <div class="credential-block">
+      <p class="credential-label">Credential ID</p>
+      <p class="credential-id">d78aef5cd39de2975b3c8ae4f00e9b275a53b147</p>
+    </div>
+    <a class="cta" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/d78aef5cd39de2975b3c8ae4f00e9b275a53b147" target="_blank" rel="noopener">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      View on DataCamp
+    </a>
+  </div>
 
-        <footer>
-            <a
-                href="https://www.linkedin.com/in/florianbraun"
-                target="_blank"
-                rel="noopener"
-                >LinkedIn</a
-            >
-            <a
-                href="https://github.com/lumenworksco"
-                target="_blank"
-                rel="noopener"
-                >GitHub</a
-            >
-            <span>Lumen Studio</span>
-        </footer>
-    </body>
+  <!-- 3 -->
+  <div class="card">
+    <p class="card-number">03 / 04</p>
+    <h2 class="card-title">Developing LLM Applications with LangChain</h2>
+    <p class="card-issuer">DATACAMP · ISSUED MARCH 2026</p>
+    <div class="skills">
+      <span class="skill-tag">LangChain</span>
+      <span class="skill-tag">RAG</span>
+      <span class="skill-tag">LLM</span>
+      <span class="skill-tag">Prompt Engineering</span>
+    </div>
+    <div class="credential-block">
+      <p class="credential-label">Credential ID</p>
+      <p class="credential-id">be5e7b847f1ecfe0040912492161c968b3c9c416</p>
+    </div>
+    <a class="cta" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/be5e7b847f1ecfe0040912492161c968b3c9c416" target="_blank" rel="noopener">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      View on DataCamp
+    </a>
+  </div>
+
+  <!-- 4 -->
+  <div class="card">
+    <p class="card-number">04 / 04</p>
+    <h2 class="card-title">Intermediate Deep Learning with PyTorch</h2>
+    <p class="card-issuer">DATACAMP · ISSUED MARCH 2026</p>
+    <div class="skills">
+      <span class="skill-tag">Deep Learning</span>
+      <span class="skill-tag">PyTorch</span>
+      <span class="skill-tag">Neural Networks</span>
+      <span class="skill-tag">CNNs</span>
+    </div>
+    <div class="credential-block">
+      <p class="credential-label">Credential ID</p>
+      <p class="credential-id">1afc7147bdb538e2e138fff4587d37b1a72f3955</p>
+    </div>
+    <a class="cta" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/1afc7147bdb538e2e138fff4587d37b1a72f3955" target="_blank" rel="noopener">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      View on DataCamp
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  <a href="https://www.linkedin.com/in/braunflorian25/" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="https://github.com/lumenworksco" target="_blank" rel="noopener">GitHub</a>
+  <a href="https://lumenworksco.github.io/Lumen-Studio/" target="_blank" rel="noopener">Lumen Studio</a>
+  <a href="https://lumenworksco.github.io/CalmCampus/" target="_blank" rel="noopener">CalmCampus</a>
+</footer>
+
+</body>
 </html>
