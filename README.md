@@ -4,7 +4,7 @@ A single-page credential showcase hosted on GitHub Pages, grouping four DataCamp
 
 ## Live site
 
-> `https://<your-username>.github.io/<repo-name>/`
+> `[https://<your-username>.github.io/<repo-name>/](https://lumenworksco.github.io/DataCamp/)`
 
 ## Credentials
 
