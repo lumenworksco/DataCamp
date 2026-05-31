@@ -1,6 +1,6 @@
 # DataCamp Credentials — Florian Braun
 
-→ [lumenworksco.github.io/DataCamp](https://lumenworksco.github.io/DataCamp/)
+→ [data.braunf.com](https://data.braunf.com/)
 
 ## Credentials
 
