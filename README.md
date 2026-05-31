@@ -36,7 +36,7 @@ DataCamp/
 
 ## Links
 
-[LinkedIn](https://www.linkedin.com/in/braunflorian25/) · [GitHub](https://github.com/lumenworksco) · [Lumen Studio](https://lumenworksco.github.io/Lumen-Studio/) · [CalmCampus](https://lumenworksco.github.io/CalmCampus/)
+[LinkedIn](https://www.linkedin.com/in/braunflorian25/) · [GitHub](https://github.com/lumenworksco) · [Hugging Face](https://huggingface.co/iPwnds) · [Lumen Studio](https://lumen.braunf.com) · [CalmCampus](https://calm.braunf.com)
 
 ---
 
