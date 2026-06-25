@@ -280,35 +280,22 @@ h1 em {
 
 /* Resource bar */
 .resource-bar {
-  padding: 20px 48px;
+  padding: 28px 48px;
   border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.resource-bar-label {
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
 }
 
 .resource-bar-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
   color: var(--accent);
   text-decoration: none;
-  letter-spacing: 0.03em;
   transition: opacity 0.15s;
 }
 
-.resource-bar-link:hover { opacity: 0.75; }
+.resource-bar-link:hover { opacity: 0.7; }
 .resource-bar-link svg { flex-shrink: 0; }
 
 /* Footer */
