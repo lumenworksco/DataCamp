@@ -278,6 +278,39 @@ h1 em {
 
 .nav-tile:hover .nav-arrow { gap: 14px; }
 
+/* Resource bar */
+.resource-bar {
+  padding: 20px 48px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.resource-bar-label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.resource-bar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: opacity 0.15s;
+}
+
+.resource-bar-link:hover { opacity: 0.75; }
+.resource-bar-link svg { flex-shrink: 0; }
+
 /* Footer */
 footer {
   margin-top: 40px;
@@ -325,4 +358,5 @@ footer a:hover { color: var(--accent); }
   .section-header { padding: 20px 24px 16px; }
   .card { padding: 28px 24px; }
   footer { padding: 0 24px; }
+  .resource-bar { padding: 16px 24px; }
 }
