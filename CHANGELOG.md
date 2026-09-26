@@ -3,6 +3,14 @@
 ## [Unreleased]
 - Multi-Modal Models with Hugging Face — credential pending
 
+## [1.3.0] — 2026-09
+### Added
+- Bachelor Specialization section (AI & Data Engineering) with its own page and home tile
+- Building Web Applications with Shiny in R (DataCamp)
+  - Credential: `8185c33d2fc2c98587b02a2df54dcaef54b704ad`
+- Introduction to Data Visualization with ggplot2 (DataCamp)
+  - Credential: `e5047d1dd7934a01318b8441bb77230dbc918831`
+
 ## [1.2.0] — 2026-03
 ### Added
 - Intermediate Deep Learning with PyTorch (DataCamp)

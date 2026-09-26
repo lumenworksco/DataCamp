@@ -22,6 +22,13 @@
 | 04 | [Intermediate Deep Learning with PyTorch](https://www.datacamp.com/completed/statement-of-accomplishment/course/d78aef5cd39de2975b3c8ae4f00e9b275a53b147) | Deep Learning, PyTorch, CNNs | ✅ Mar 2026 |
 | 05 | GitHub Foundations | Git, GitHub, Version Control | ✅ Oct 2025 |
 
+## Bachelor Specialization — AI & Data Engineering
+
+| # | Course | Skills | Status |
+|---|--------|--------|--------|
+| 01 | [Building Web Applications with Shiny in R](https://www.datacamp.com/completed/statement-of-accomplishment/course/8185c33d2fc2c98587b02a2df54dcaef54b704ad) | R, Shiny, Reactive Programming | ✅ Sep 2026 |
+| 02 | [Introduction to Data Visualization with ggplot2](https://www.datacamp.com/completed/statement-of-accomplishment/course/e5047d1dd7934a01318b8441bb77230dbc918831) | R, ggplot2, Data Visualization | ✅ Sep 2026 |
+
 ## Structure
 
 ```
@@ -30,6 +37,9 @@ DataCamp/
 │   ├── css/style.css
 │   └── img/favicon.ico, og-image.png
 ├── index.html
+├── certifications.html
+├── courses.html
+├── specialization.html
 ├── CHANGELOG.md
 └── README.md
 ```
