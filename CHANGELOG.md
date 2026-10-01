@@ -1,7 +1,14 @@
 # Changelog
 
-## [Unreleased]
-- Multi-Modal Models with Hugging Face — credential pending
+## [1.4.0] — 2026-10
+### Added
+- Natural Language Processing (NLP) in Python (DataCamp)
+  - Credential: `906e5a5606947147f3c5ef6dcdf7af74a07c8ae7`
+- Linear Algebra for Data Science in R (DataCamp)
+  - Credential: `4af4fcd3ef0c74ed96353549285bf0e7d374b158`
+### Changed
+- Multi-Modal Models with Hugging Face — credential issued, moved from "Coming soon" to a full credential card
+  - Credential: `05dd46097cacb0fcda53f2c672fcf418a78dc3a9`
 
 ## [1.3.0] — 2026-09
 ### Added
