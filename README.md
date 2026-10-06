@@ -16,11 +16,13 @@
 
 | # | Course | Skills | Status |
 |---|--------|--------|--------|
-| 01 | Multi-Modal Models with Hugging Face | Hugging Face, Vision-Language, Transformers | 🔄 Coming soon |
-| 02 | [Transformer Models with PyTorch](https://www.datacamp.com/completed/statement-of-accomplishment/course/1afc7147bdb538e2e138fff4587d37b1a72f3955) | PyTorch, Deep Learning, NLP | ✅ Mar 2026 |
-| 03 | [Developing LLM Applications with LangChain](https://www.datacamp.com/completed/statement-of-accomplishment/course/be5e7b847f1ecfe0040912492161c968b3c9c416) | LangChain, RAG, Prompt Engineering | ✅ Mar 2026 |
-| 04 | [Intermediate Deep Learning with PyTorch](https://www.datacamp.com/completed/statement-of-accomplishment/course/d78aef5cd39de2975b3c8ae4f00e9b275a53b147) | Deep Learning, PyTorch, CNNs | ✅ Mar 2026 |
-| 05 | GitHub Foundations | Git, GitHub, Version Control | ✅ Oct 2025 |
+| 01 | [Multi-Modal Models with Hugging Face](https://www.datacamp.com/completed/statement-of-accomplishment/course/05dd46097cacb0fcda53f2c672fcf418a78dc3a9) | Hugging Face, Vision-Language, Transformers | ✅ Sep 2026 |
+| 02 | [Natural Language Processing (NLP) in Python](https://www.datacamp.com/completed/statement-of-accomplishment/course/906e5a5606947147f3c5ef6dcdf7af74a07c8ae7) | NLP, Hugging Face, Tokenization | ✅ Sep 2026 |
+| 03 | [Linear Algebra for Data Science in R](https://www.datacamp.com/completed/statement-of-accomplishment/course/4af4fcd3ef0c74ed96353549285bf0e7d374b158) | Linear Algebra, R, PCA | ✅ Oct 2026 |
+| 04 | [Transformer Models with PyTorch](https://www.datacamp.com/completed/statement-of-accomplishment/course/1afc7147bdb538e2e138fff4587d37b1a72f3955) | PyTorch, Deep Learning, NLP | ✅ Mar 2026 |
+| 05 | [Developing LLM Applications with LangChain](https://www.datacamp.com/completed/statement-of-accomplishment/course/be5e7b847f1ecfe0040912492161c968b3c9c416) | LangChain, RAG, Prompt Engineering | ✅ Mar 2026 |
+| 06 | [Intermediate Deep Learning with PyTorch](https://www.datacamp.com/completed/statement-of-accomplishment/course/d78aef5cd39de2975b3c8ae4f00e9b275a53b147) | Deep Learning, PyTorch, CNNs | ✅ Mar 2026 |
+| 07 | GitHub Foundations | Git, GitHub, Version Control | ✅ Oct 2025 |
 
 ## Bachelor Specialization — AI & Data Engineering
 
